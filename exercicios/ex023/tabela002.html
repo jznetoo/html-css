@@ -13,6 +13,14 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         td, th {
@@ -20,13 +28,31 @@
             padding: 10px;
         }
 
+        thead > tr > th {
+            position: sticky;
+            top: -2px;
+            background-color: #383838;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
         }
 
-        .num {
+        tbody > tr:nth-child(odd){
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even){
+            background-color: lightgray;
+        }
+
+        td.num {
             text-align: right;
+        }
+
+        th.pop {
+            width: 50px;
         }
     </style>
 </head>
@@ -35,6 +61,7 @@
     <!-- 
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -44,10 +71,11 @@
      -->
 
      <table>
+        <caption>Top 10 das Unidades Federativas de acordo com a População</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" class="pop">População</th>
             </tr>
         </thead>
         <tbody>
@@ -91,13 +119,62 @@
                 <td>Santa Catarina</td>
                 <td class="num">7.762.154</td>
             </tr>
+
+            <!-- finaliza aqui -->
+
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">46.024.937</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20.732.660</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">16.615.526</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.659.023</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.835.379</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.088.065</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9.051.113</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8.936.431</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8.442.962</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7.762.154</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>155.148.250</strong></td>
             </tr>
         </tfoot>
      </table>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, architecto distinctio porro tempore nihil quia aliquam natus, quasi mollitia quis quibusdam voluptates eius non, minus nostrum ipsa labore molestias odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. In corporis commodi quo sequi incidunt porro itaque, fugit eligendi quisquam numquam distinctio possimus obcaecati accusamus, placeat veniam quas earum omnis. Aliquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, odit harum fugiat nemo expedita veniam reprehenderit magni quod deserunt laboriosam dolore laborum dolores dignissimos, consequatur quia recusandae fuga sint rerum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ipsam ex error molestias, consequatur fugiat minus ab incidunt pariatur minima sunt iste, et explicabo natus repellat, ea recusandae magnam veniam.</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, architecto distinctio porro tempore nihil quia aliquam natus, quasi mollitia quis quibusdam voluptates eius non, minus nostrum ipsa labore molestias odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. In corporis commodi quo sequi incidunt porro itaque, fugit eligendi quisquam numquam distinctio possimus obcaecati accusamus, placeat veniam quas earum omnis. Aliquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, odit harum fugiat nemo expedita veniam reprehenderit magni quod deserunt laboriosam dolore laborum dolores dignissimos, consequatur quia recusandae fuga sint rerum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ipsam ex error molestias, consequatur fugiat minus ab incidunt pariatur minima sunt iste, et explicabo natus repellat, ea recusandae magnam veniam.</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, architecto distinctio porro tempore nihil quia aliquam natus, quasi mollitia quis quibusdam voluptates eius non, minus nostrum ipsa labore molestias odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. In corporis commodi quo sequi incidunt porro itaque, fugit eligendi quisquam numquam distinctio possimus obcaecati accusamus, placeat veniam quas earum omnis. Aliquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, odit harum fugiat nemo expedita veniam reprehenderit magni quod deserunt laboriosam dolore laborum dolores dignissimos, consequatur quia recusandae fuga sint rerum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ipsam ex error molestias, consequatur fugiat minus ab incidunt pariatur minima sunt iste, et explicabo natus repellat, ea recusandae magnam veniam.</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, architecto distinctio porro tempore nihil quia aliquam natus, quasi mollitia quis quibusdam voluptates eius non, minus nostrum ipsa labore molestias odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. In corporis commodi quo sequi incidunt porro itaque, fugit eligendi quisquam numquam distinctio possimus obcaecati accusamus, placeat veniam quas earum omnis. Aliquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, odit harum fugiat nemo expedita veniam reprehenderit magni quod deserunt laboriosam dolore laborum dolores dignissimos, consequatur quia recusandae fuga sint rerum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ipsam ex error molestias, consequatur fugiat minus ab incidunt pariatur minima sunt iste, et explicabo natus repellat, ea recusandae magnam veniam.</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, architecto distinctio porro tempore nihil quia aliquam natus, quasi mollitia quis quibusdam voluptates eius non, minus nostrum ipsa labore molestias odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. In corporis commodi quo sequi incidunt porro itaque, fugit eligendi quisquam numquam distinctio possimus obcaecati accusamus, placeat veniam quas earum omnis. Aliquam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, odit harum fugiat nemo expedita veniam reprehenderit magni quod deserunt laboriosam dolore laborum dolores dignissimos, consequatur quia recusandae fuga sint rerum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ipsam ex error molestias, consequatur fugiat minus ab incidunt pariatur minima sunt iste, et explicabo natus repellat, ea recusandae magnam veniam.</p>
+     
 </body>
 </html>
